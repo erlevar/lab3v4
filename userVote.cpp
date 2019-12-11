@@ -53,12 +53,16 @@ int main()
     form_iterator vote = cgi.getElement("voteType");
     string voteString = **vote;
 
+    //"email" is called "username" in the UI
     form_iterator email = cgi.getElement("email");
     string emailString = **email;
 
     form_iterator artID = cgi.getElement("ArtID");
     string artIDString = ** artID;
     
+    //"type" of data call can be "vote" or "display"
+    //"display" outputs data from the database
+    //"vote" adds data to the database
     form_iterator type = cgi.getElement("type");
     string typeString = **type;
 
